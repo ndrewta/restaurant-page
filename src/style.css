@@ -1,10 +1,12 @@
 body {
-  background-image: url("background.jpg");
-  background-size: 100%;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   margin: 0;
+}
+
+button {
+  all: unset;
+  border: blue solid;
+  color: white;
+  font-size: 30px;
 }
 
 #content {
@@ -17,6 +19,11 @@ body {
   grid-template-rows: 75px 1fr 15px;
   gap: 20px;
   height: 100vh;
+  background-image: url("background.jpg");
+  background-size: 100%;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 #header {
@@ -34,12 +41,6 @@ body {
   display: flex;
   justify-content: space-between;
   width: 50%;
-}
-
-#header-items > p {
-  border: blue solid;
-  color: white;
-  font-size: 30px;
 }
 
 #footer {
@@ -61,21 +62,29 @@ body {
   background: rgb(221, 203, 203, 50%);
 }
 
-#home-title {
+#home-heading,
+#contact-heading {
   color: aliceblue;
   font-size: 85px;
   margin: 0;
 }
 
-#home-text {
+#home-text,
+#contact-text {
   color: aliceblue;
   font-size: 20px;
 }
 
-#text-wrapper {
+#home-wrapper {
   display: flex;
   flex-direction: column;
   max-width: 350px;
   margin-top: 50%;
   border: dotted red;
+}
+
+#contact-wrapper {
+  white-space: pre-line;
+  border: dotted red;
+  margin-top: 50%;
 }

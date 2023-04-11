@@ -1,19 +1,19 @@
 import "./style.css";
-import * as home from "./home";
-import * as menu from "./menu";
-import * as contact from "./contact";
-
-// cache div
-const contentDiv = document.getElementById("content");
+import pageSetup from "./pagesetup";
+import updateHome from "./home";
+import updateMenu from "./menu";
+import updateContact from "./contact";
 
 // Setup header, content, footer
-home.setUpPage(contentDiv);
-home.updateContent();
+const content = document.getElementById("content");
+pageSetup(content);
+const mainContent = document.getElementById("main-content");
+updateHome(mainContent);
 
 //
 const homeBtn = document.getElementById("homeBtn");
 const menuBtn = document.getElementById("menuBtn");
 const contactBtn = document.getElementById("contactBtn");
-homeBtn.addEventListener("click", home.updateContent);
-menuBtn.addEventListener("click", menu.updateContent);
-contactBtn.addEventListener("click", contact.updateContent);
+homeBtn.addEventListener("click", () => updateHome(mainContent));
+menuBtn.addEventListener("click", () => updateMenu(mainContent));
+contactBtn.addEventListener("click", () => updateContact(mainContent));

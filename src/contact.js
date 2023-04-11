@@ -1,6 +1,6 @@
-export const setContent = () => {
-  const contentWrapper = document.getElementById("main-content");
-  const element = document.createElement("div");
+const setContent = (element) => {
+  const contentWrapper = element;
+  const div = document.createElement("div");
 
   // Heading
   const heading = document.createElement("h1");
@@ -20,15 +20,14 @@ export const setContent = () => {
   wrapper.appendChild(heading);
   wrapper.appendChild(text);
 
-  element.appendChild(wrapper);
-  contentWrapper.appendChild(element);
+  div.appendChild(wrapper);
+  contentWrapper.appendChild(div);
 };
-
-export const updateContent = () => {
+export default function updateContent(div) {
   // Remove all child divs then call setContent
-  const element = document.getElementById("main-content");
+  const element = div;
   while (element.firstChild) {
     element.firstChild.remove();
   }
-  setContent();
-};
+  setContent(element);
+}

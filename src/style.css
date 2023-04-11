@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  background-image: url("background.jpg");
+  background-size: 100%;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 button {
@@ -7,6 +12,27 @@ button {
   border: blue solid;
   color: white;
   font-size: 30px;
+}
+
+ul {
+  padding-left: 5px;
+}
+
+li {
+  list-style: none;
+  border: solid blue 1px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 35px;
+  margin-top: -25px;
+  text-align: center;
+  border: solid;
+}
+
+h3 {
+  margin: 0;
 }
 
 #content {
@@ -19,11 +45,7 @@ button {
   grid-template-rows: 75px 1fr 15px;
   gap: 20px;
   height: 100vh;
-  background-image: url("background.jpg");
-  background-size: 100%;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  overflow: auto;
 }
 
 #header {
@@ -81,6 +103,44 @@ button {
   max-width: 350px;
   margin-top: 50%;
   border: dotted red;
+}
+
+#menu-wrapper {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 5fr;
+  grid-template-areas: "heading heading" "food drink";
+}
+
+#menu-heading {
+  grid-area: heading;
+  text-align: center;
+  font-size: 65px;
+  margin-top: 10px;
+}
+
+#food-list {
+  grid-area: food;
+  padding: 10px;
+}
+
+#drink-list {
+  grid-area: drink;
+  padding: 10px;
+}
+
+.item-divide {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+  padding: 10px;
+}
+
+.item-divide > img {
+  max-height: 150px;
+  max-width: auto;
+  justify-self: center;
 }
 
 #contact-wrapper {

@@ -1,4 +1,11 @@
+@font-face {
+  font-family: "glacial";
+  src: url("./glacial.woff") format("woff"),
+    url("./glacial.woff2") format("woff2");
+}
+
 body {
+  font-family: glacial, Arial, Helvetica, sans-serif;
   margin: 0;
   background-image: url("background.jpg");
   background-size: 100%;
@@ -9,26 +16,54 @@ body {
 
 button {
   all: unset;
-  border: blue solid;
+  width: 115px;
+  text-align: center;
+  border: solid rgb(201, 198, 231) 1px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(109, 103, 103);
+  background-color: rgba(132, 140, 148, 0.5);
   color: white;
   font-size: 30px;
 }
 
+button:hover {
+  background-color: rgba(187, 199, 211, 0.5);
+}
+
+button:active {
+  background-color: rgba(94, 98, 102, 0.5);
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
 ul {
-  padding-left: 5px;
+  margin-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 li {
   list-style: none;
-  border: solid blue 1px;
+  border: solid rgb(140, 140, 146) 1px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(109, 103, 103);
   margin-bottom: 10px;
+  background-color: rgba(132, 140, 148, 0.6);
+  margin-top: 25px;
 }
 
 h2 {
   font-size: 35px;
-  margin-top: -25px;
+  margin-top: -5px;
   text-align: center;
-  border: solid;
+  border: solid rgb(183, 183, 216) 1px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(109, 103, 103);
+  background-color: rgba(132, 140, 148, 0.5);
 }
 
 h3 {
@@ -49,7 +84,8 @@ h3 {
 }
 
 #header {
-  border: red solid 1px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(109, 103, 103);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +98,7 @@ h3 {
 #header-items {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 650px;
 }
 
 #footer {
@@ -72,16 +108,18 @@ h3 {
   align-items: center;
   margin-bottom: 10px;
   color: white;
+  text-align: center;
 }
 
 #main-content {
-  border: orange solid 1px;
   display: flex;
   justify-content: center;
   width: 80%;
   height: 100%;
   margin: auto;
   background: rgb(221, 203, 203, 50%);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(109, 103, 103);
 }
 
 #home-heading,
@@ -100,9 +138,15 @@ h3 {
 #home-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 350px;
-  margin-top: 50%;
-  border: dotted red;
+  max-width: 375px;
+  margin-top: 20%;
+}
+
+#home-wrapper > img {
+  margin-top: 20%;
+  width: 200%;
+  height: auto;
+  align-self: center;
 }
 
 #menu-wrapper {
@@ -111,13 +155,15 @@ h3 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100px 5fr;
   grid-template-areas: "heading heading" "food drink";
+  padding: 10px;
+  color: white;
 }
 
 #menu-heading {
   grid-area: heading;
   text-align: center;
-  font-size: 65px;
-  margin-top: 10px;
+  font-size: 75px;
+  margin-top: 20px;
 }
 
 #food-list {
@@ -138,13 +184,21 @@ h3 {
 }
 
 .item-divide > img {
-  max-height: 150px;
-  max-width: auto;
+  max-height: auto;
+  max-width: 135px;
   justify-self: center;
+  margin: 2px;
 }
 
 #contact-wrapper {
   white-space: pre-line;
-  border: dotted red;
-  margin-top: 50%;
+  margin-top: 10%;
+  margin-left: 25%;
+}
+
+#contact-wrapper > img {
+  margin-top: 5%;
+  width: 90%;
+  height: auto;
+  align-self: center;
 }

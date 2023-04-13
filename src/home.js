@@ -1,3 +1,5 @@
+import sakeImg from "./sake-home.jpg";
+
 const setContent = (element) => {
   const contentWrapper = element;
   const div = document.createElement("div");
@@ -9,15 +11,21 @@ const setContent = (element) => {
 
   // Description
   const text = document.createElement("p");
-  text.textContent = "The finest meals and bespoke service as it should be.";
+  text.textContent =
+    '"Escape the ordinary and journey underground to our hidden Japanese oasis."';
   text.setAttribute("id", "home-text");
 
   const wrapper = document.createElement("div");
   wrapper.setAttribute("id", "home-wrapper");
 
+  // Image
+  const img = new Image();
+  img.src = sakeImg;
+
   // Append divs
   wrapper.appendChild(heading);
   wrapper.appendChild(text);
+  wrapper.appendChild(img);
 
   div.appendChild(wrapper);
   contentWrapper.appendChild(div);

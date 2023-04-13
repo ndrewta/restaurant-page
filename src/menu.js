@@ -1,6 +1,11 @@
-import { doc } from "prettier";
-import dPlaceholder from "./drink.jpg";
-import fPlaceholder from "./food.jpg";
+import ramenImg from "./ramen.jpg";
+import tacoImg from "./taco.jpg";
+import nigiriImg from "./nigiri.jpg";
+import curryImg from "./curry.jpg";
+import sakeImg from "./sake.jpg";
+import martiniImg from "./martini.jpg";
+import sangriaImg from "./sangria.jpg";
+import gimletImg from "./gimlet.jpg";
 
 const foodOne = {
   name: "Ramen Rebellion",
@@ -8,7 +13,7 @@ const foodOne = {
     "A hearty bowl of tradition ramen noodles in a savory broth,\n" +
     "topped with tender slices of chashu pork, bamboo shoots, scallions and a perfectly soft boiled egg.",
   price: "$12.50",
-  icon: fPlaceholder,
+  icon: ramenImg,
 };
 const foodTwo = {
   name: "Tokyo Tacos",
@@ -16,7 +21,7 @@ const foodTwo = {
     "A fusion of Japanese and Mexican cuisine, featuring crispy tempura shrimp, avocado, pickled daikon and carrot,\n" +
     "and a drizzle of spicy mayo in a warm tortilla. Served with a side of wasabi-infused salsa.",
   price: "$10.00",
-  icon: fPlaceholder,
+  icon: tacoImg,
 };
 const foodThree = {
   name: "Ninja Nigiri",
@@ -24,22 +29,22 @@ const foodThree = {
     "A selection of bite-sized sushi featuring fresh salmon, tuna, yellowtail, and eel.\n" +
     "Each piece is expertly hand-pressed and garnished with a dab of wasabi and a touch of soy sauce.",
   price: "$14.00",
-  icon: fPlaceholder,
+  icon: nigiriImg,
 };
 const foodFour = {
   name: "Katsu Curry",
   description:
-    "Tender breaded chicken cutlet served on a bed of steaming Japanese rice with a side of creamy curry sauce.\n" +
+    "Tender breaded chicken cutlet served on a bed of steaming Japanese rice with a side of creamy curry sauce." +
     "Topped with crispy fried onions and a sprinkle of fresh parsley.",
   price: "$16.50",
-  icon: fPlaceholder,
+  icon: curryImg,
 };
 const drinkOne = {
   name: "Samurai Sake",
   description:
     "A premium sake served chilled in a traditional ceramic cup. Rich and fragrant with a smooth finish.",
   price: "$8.00",
-  icon: dPlaceholder,
+  icon: sakeImg,
 };
 const drinkTwo = {
   name: "Matcha Martini",
@@ -47,7 +52,7 @@ const drinkTwo = {
     "A decadent blend of premium vodka, green tea liqueur, and pure matcha powder.\n" +
     "Served up with a dusting of matcha and a delicate lemon twist.",
   price: "$12.00",
-  icon: dPlaceholder,
+  icon: martiniImg,
 };
 const drinkThree = {
   name: "Shogun Sangria",
@@ -55,14 +60,20 @@ const drinkThree = {
     "A refreshing twist on the classic Spanish drink, featuring red wine, citrus fruits, and a splash of Japanese yuzu juice.\n" +
     "Served over ice with a slice of fresh orange.",
   price: "$9.00",
-  icon: dPlaceholder,
+  icon: sangriaImg,
 };
-const menuMsg =
-  "We hope you enjoy our selection of Japanese-inspired cuisine and cocktails." +
-  "Thank you for choosing our restaurant for your dining experience!";
+
+const drinkFour = {
+  name: "Geisha Gimlet",
+  description:
+    "A classic gin gimlet with a Japanese twist.\n" +
+    "Made with premium gin, fresh lime juice, and a splash of sweet and sour yuzu syrup. Served up with a beautiful edible flower garnish.",
+  price: "$11.00",
+  icon: gimletImg,
+};
 
 const foodsList = [foodOne, foodTwo, foodThree, foodFour];
-const drinksList = [drinkOne, drinkTwo, drinkThree];
+const drinksList = [drinkOne, drinkTwo, drinkThree, drinkFour];
 
 const createListItem = (item) => {
   const listElem = document.createElement("li");

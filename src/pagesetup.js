@@ -28,8 +28,14 @@ export default function setUpPage(element) {
 
   // Footer
   const footer = document.createElement("div");
-  footer.textContent = "Copyright ndrewta";
   footer.setAttribute("id", "footer");
+
+  const anchor = document.createElement("a");
+  anchor.setAttribute("href", "https://github.com/ndrewta");
+  anchor.setAttribute("target", "_blank");
+  anchor.setAttribute("rel", "noopener noreferrer");
+  anchor.textContent = "Site designed by ndrewta";
+  footer.appendChild(anchor);
 
   // Append divs
   element.appendChild(header);

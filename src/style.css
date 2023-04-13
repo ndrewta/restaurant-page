@@ -12,6 +12,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  text-shadow: 1px 1px rgb(53, 52, 52);
 }
 
 button {
@@ -53,7 +54,10 @@ li {
   box-shadow: 2px 2px 2px 2px rgb(109, 103, 103);
   margin-bottom: 10px;
   background-color: rgba(132, 140, 148, 0.6);
-  margin-top: 25px;
+  margin-top: 20px;
+  height: 185px;
+  justify-content: center;
+  align-items: center;
 }
 
 h2 {

@@ -193,12 +193,12 @@ h3 {
 #contact-wrapper {
   white-space: pre-line;
   margin-top: 10%;
-  margin-left: 10%;
+  margin-left: 20%;
 }
 
 #contact-wrapper > img {
   margin-top: 5%;
-  width: 90%;
+  width: 80%;
   height: auto;
   align-self: center;
 }

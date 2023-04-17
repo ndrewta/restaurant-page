@@ -1,6 +1,3 @@
 node_modules
-*.json
 .prettierignore
-node_modules
-webpack.config.js
 .vscode
